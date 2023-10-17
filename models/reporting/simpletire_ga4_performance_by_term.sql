@@ -24,7 +24,7 @@ WITH
         COALESCE(SUM(purchase_value),0) as revenue
         
     FROM {{ source('ga4_raw','traffic_sources_term') }}
-    GROUP BY 1,2,3,4,5,6)
+    GROUP BY 1,2,3,4,5,6,7)
 
     {%- if not loop.last %},
 
