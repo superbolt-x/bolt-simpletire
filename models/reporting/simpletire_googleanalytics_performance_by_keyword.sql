@@ -17,7 +17,6 @@ WITH
         COALESCE(SUM(sessions),0) as sessions,
         COALESCE(SUM(sessions::float*(percent_new_sessions::float/100::float)),0) as new_sessions,
         COALESCE(SUM(sessions::float*(bounce_rate::float/100::float)),0) as bounced_sessions,
-        COALESCE(SUM(sessions::float*avg_session_duration::float),0) as session_duration,
         COALESCE(SUM(pageviews),0) as pageviews,
         COALESCE(SUM(transactions),0) as purchases,
         COALESCE(SUM(transaction_revenue),0) as revenue
