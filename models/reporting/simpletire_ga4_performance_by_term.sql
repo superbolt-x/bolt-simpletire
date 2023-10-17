@@ -19,9 +19,8 @@ WITH
         COALESCE(SUM(new_users),0) as new_users,
         COALESCE(SUM(sessions::float*(bounce_rate::float/100::float)),0) as bounced_sessions,
         COALESCE(SUM(engaged_sessions),0) as engaged_sessions,
-        COALESCE(SUM(page_view),0) as pageviews,
-        COALESCE(SUM(purchase),0) as purchases,
-        COALESCE(SUM(purchase_value),0) as revenue
+        COALESCE(SUM(conversions_purchase),0) as purchases,
+        COALESCE(SUM(purchase_revenue),0) as revenue
         
     FROM {{ source('ga4_raw','traffic_sources_term') }}
     GROUP BY 1,2,3,4,5,6,7)
