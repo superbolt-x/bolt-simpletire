@@ -22,7 +22,7 @@ WITH
         COALESCE(SUM(transaction_revenue),0) as revenue
         
     FROM {{ source('googleanalytics_raw','traffic') }}
-    GROUP BY 1,2,3,4,5)
+    GROUP BY 1,2,3,4,5,6)
 
     {%- if not loop.last %},
 
