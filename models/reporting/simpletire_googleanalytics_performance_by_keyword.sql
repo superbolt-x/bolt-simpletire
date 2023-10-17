@@ -9,7 +9,7 @@ WITH
     performance_{{date_granularity}} AS 
     (SELECT 
         '{{date_granularity}}' as date_granularity,
-        {{date_granularity}} as date,
+        DATE_TRUNC('{{date_granularity}}',date)::date as date,
         profile,
         source_medium,
         campaign,
