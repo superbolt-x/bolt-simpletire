@@ -16,7 +16,7 @@ WITH
         first_user_campaign_id as campaign_id,
         first_user_manual_term as adset,
         COALESCE(SUM(sessions),0) as sessions,
-        COALESCE(SUM(sessions::float*(percent_new_sessions::float/100::float)),0) as new_sessions,
+        COALESCE(SUM(new_users),0) as new_users,
         COALESCE(SUM(sessions::float*(bounce_rate::float/100::float)),0) as bounced_sessions,
         COALESCE(SUM(engaged_sessions),0) as engaged_sessions,
         COALESCE(SUM(page_view),0) as pageviews,
