@@ -1,3 +1,7 @@
+{{ config (
+    alias = target.database + '_ga_ga4_conversions'
+)}}
+
 with meta_data as 
 (select date, 
 case when campaign_name = '[Superbolt] - Retargeting - Purchase - Auto' then '[Superbolt] - Retargeting - Purchase - Auto (inactive)' else campaign_name end as campaign_name, 
