@@ -1,6 +1,16 @@
 version: 2
 
 sources:
+  - name: reporting
+    schema: reporting
+    tables:
+      - name: facebook_ad_performance
+        identifier: simpletire_facebook_ad_performance
+      - name: ga4_performance_by_term
+        identifier: simpletire_ga4_performance_by_term
+      - name: googleanalytics_performance_by_keyword
+        identifier: simpletire_googleanalytics_performance_by_keyword
+      
   - name: googleanalytics_raw
     schema: googleanalytics_raw
     tables:
