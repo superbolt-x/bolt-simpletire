@@ -26,5 +26,6 @@ impressions,
 link_clicks,
 add_to_cart,
 purchases,
-revenue
+revenue,
+onsite_web_view_content as view_content
 FROM {{ ref('facebook_performance_by_ad') }}
