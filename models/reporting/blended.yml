@@ -25,3 +25,9 @@ sources:
 
       - name: traffic_sources_ad_facebook
         identifier: traffic_sources_ad_facebook
+
+  - name: facebook_base
+    schema: facebook_base
+    tables:
+    - name: facebook_ads
+      identifier: facebook_ads
