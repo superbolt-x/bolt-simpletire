@@ -22,3 +22,6 @@ sources:
     tables:
       - name: traffic_sources_term
         identifier: traffic_sources_term
+
+      - name: traffic_sources_ad_facebook
+        identifier: traffic_sources_ad_facebook
